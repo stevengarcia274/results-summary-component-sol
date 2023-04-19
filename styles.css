@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Rubik:wght@400;500&display=swap");
+
+:root {
+  --grey-text: rgb(167, 167, 167);
+  --base-purple: rgb(53, 39, 245);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+}
+
+.overall-card {
+  display: flex;
+  box-shadow: 5px 5px 15px rgb(225, 225, 225);
+  border-radius: 25px;
+  overflow: hidden;
+  max-width: 800px;
+}
+
+.result-card {
+  background: linear-gradient(
+    to top,
+    var(--base-purple),
+    rgb(52, 33, 245),
+    rgb(88, 31, 243),
+    rgb(88, 31, 243)
+  );
+  padding: 32px 36px;
+  /* max-width: 250px; */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.circle-score {
+  background: linear-gradient(
+    to top,
+    var(--base-purple),
+    rgb(46, 37, 170),
+    rgb(56, 46, 196)
+  );
+  border-radius: 50%;
+  width: 135px;
+  height: 135px;
+  display: grid;
+  margin-bottom: 24px;
+}
+
+.your-result {
+  color: var(--grey-text);
+  margin-bottom: 24px;
+}
+
+.score-section {
+  place-self: center;
+}
+
+.over-score {
+  font-size: 3rem;
+  color: white;
+}
+
+.out-of {
+  color: var(--grey-text);
+}
+
+.score-feeling {
+  color: white;
+  margin-bottom: 18px;
+}
+
+.score-descrip {
+  color: var(--grey-text);
+  margin-bottom: 18px;
+}
+
+.category {
+  display: flex;
+  flex-direction: row;
+  padding: 16px;
+  border-radius: 8px;
+  flex-wrap: wrap;
+}
+
+.category > svg {
+  margin-right: 12px;
+}
+
+.sum-catagories {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.summary-card {
+  flex: 2;
+  padding: 24px;
+}
+
+.sum-red {
+  color: red;
+}
+
+.sum-yellow {
+  color: rgb(228, 178, 52);
+}
+
+.sum-green {
+  color: rgb(30, 183, 30);
+}
+
+.sum-purple {
+  color: var(--base-purple);
+}
+
+.scores {
+  color: var(--grey-text);
+  margin-left: auto;
+}
+
+.sum-score {
+  font-weight: 600;
+  color: black;
+}
+
+.cat-red {
+  background: rgb(253, 232, 232);
+}
+
+.cat-yellow {
+  background: rgb(253, 232, 198);
+}
+
+.cat-green {
+  background: rgb(229, 253, 208);
+}
+
+.cat-purple {
+  background: rgb(237, 223, 255);
+}
+
+button {
+  width: 100%;
+  color: white;
+  background: rgb(40, 40, 67);
+  border-radius: 20px;
+  padding: 12px 0;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .overall-card {
+    flex-direction: column;
+    border-radius: 0;
+  }
+
+  .result-card {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 25px;
+  }
+}
